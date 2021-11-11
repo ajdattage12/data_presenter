@@ -28,7 +28,7 @@ loves_code = True
 if loves_code == True:
     print("I love to code!")
 elif loves_code == False:
-    print("Coding has it's")
+    print("Coding has it's challenges.")
 
 
 # PROBLEM 6
@@ -76,22 +76,31 @@ score = 74
 # Determine if the letter grade of the given variable 'score'. If the variable is a 90 or above, console-log an 'A', between 80 and 89, console-log a 'B', between 70 and 79, 'C', between 60 and 69, 'D', and anything below 60 should console-log an 'F'.
 
 def assign_grade (score):
-    if score <= 90:
-        console.log('A')
-    elif score >= 80 & <= 89:
-        console.log('B')
-    elif score >= 70 & <= 79:
-        console.log('C')
-    elif score >= 60 & <= 69:
-        console.log('D')
+    if score >= 90:
+        print('A')
+    elif score >= 80 and score <= 89:
+        print('B')
+    elif score >= 70 and score <= 79:
+        print('C')
+    elif score >= 60 and score <= 69:
+        print('D')
     else :
-        console.log('F')
+        print('F')
 
 assign_grade(score)
 # Problem 11
 # Create a variable called 'changeMyMind' and set it equal to true. 
 # Check to see if changeMyMind is set to true or false, if it is true, change the status to false, if it is false, change the status to true.
 
+change_my_mind = True
+
+def mind_changer(boolean):
+    if (boolean == True):
+        return "False"
+    else:
+        return "True"
+
+print(mind_changer(change_my_mind))
 
 # ADVANCED
 
@@ -101,14 +110,25 @@ friends = ['Joe', 'Sally', 'Camilo', 'Perry', 'Susan']
 # Problem 12
 # Research to find the Python method that allows you to add an element to the end of the array (similar to push() in JavaScript), then add a name to the end of the `friends` array.
 
+friends.append('Jessica')
+print(friends)
 
 # Problem 13
 # Print out the total amount of elements in the `friends` array. The Python method you are looking for is similar to the JavaScript property `.length`.
 
+print(len(friends))
+# x = len(friends)
+# print(x)
 
 # Problem 14
 # Add a name into the third position in the array (index 2). Make sure you are not overwriting the value that is already there.
 
+friends.insert(2, 'Greg')
+print(friends)
+
 
 # Problem 15
 # Remove the last item in the array (try to think about how you can do this dynamically, meaning, if the array contents were to change, your code would still work).
+
+friends.pop(-1)
+print(friends)
